@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+header {
+  background: lavender; }
+  header .header-container {
+    padding: 0.5rem 2rem; }
+
+main .col-2 {
+  padding-left: 0;
+  padding-right: 0; }
+
+main .sidebar i {
+  position: absolute;
+  right: 10px; }
+
+main .sidebar ul li {
+  padding: 1rem; }
+  main .sidebar ul li ul {
+    padding-left: 20px; }
+    main .sidebar ul li ul li {
+      list-style: none; }
+
+main .sidebar > ul > li {
+  border-bottom: 1px solid red; }
+
+main .main-area .card {
+  width: 90%; }
+  main .main-area .card:first-child {
+    margin-bottom: 2rem; }
