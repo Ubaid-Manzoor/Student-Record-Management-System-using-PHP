@@ -2,7 +2,7 @@
 
         <?php require_once APPROOT . '/views/inc/sidebar.php'; ?>
         <div class="main-area col-10">
-            view Subjects
+            view Subject
         </div>
 
 <?php require APPROOT . '/views/inc/footer.php';?>

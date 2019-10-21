@@ -30,3 +30,6 @@ main .main-area .card {
   width: 90%; }
   main .main-area .card:first-child {
     margin-bottom: 2rem; }
+  main .main-area .card .card-body .action-icon {
+    display: flex;
+    border: 0; }

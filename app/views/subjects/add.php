@@ -1,3 +1,5 @@
+<?php echo "Here" ?> 
+
 <?php require APPROOT . '/views/inc/header.php';?>
 
         <?php require_once APPROOT . '/views/inc/sidebar.php'; ?>
@@ -20,7 +22,15 @@
                                 <input type="text" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Subject</label>
+                                <label for="">Subject 1</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Subject 2</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Subject 3</label>
                                 <input type="text" class="form-control">
                             </div>
                             <input type="submit" value="Add Course" class="btn btn-primary">

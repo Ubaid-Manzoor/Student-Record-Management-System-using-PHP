@@ -45,6 +45,9 @@
         }
 
         public function show(){
-            $this->view('courses/show');
+            $data = $this->courseModel->getCourses();
+            $this->view('courses/show', $data);
+
         }
+
     }

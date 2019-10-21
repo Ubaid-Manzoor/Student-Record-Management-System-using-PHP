@@ -21,4 +21,12 @@
                 return false;
             }
         }
+
+        public function getCourses(){
+            $query = "SELECT * FROM courses";
+
+            $this->db->query($query);
+
+            return $this->db->resultSet();
+        }
     }

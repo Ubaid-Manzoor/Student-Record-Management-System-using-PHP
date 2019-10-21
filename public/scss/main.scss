@@ -49,6 +49,14 @@ main{
             &:first-child{
                 margin-bottom:2rem;
             }
+
+
+            .card-body{
+                .action-icon{
+                    display:flex;
+                    border:0;
+                }                
+            }
         }
     }
  }
