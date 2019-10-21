@@ -23,7 +23,7 @@
                                 <label for="">Date of Creation</label>
                                 <input name="creation_date" type="date" class="form-control">
                             </div>
-                            <input name="submit" type="submit" value="Add Course" class="btn btn-primary">
+                            <input type="submit" name="submit" value="Add Course" class="btn btn-primary">
                         </form>
                     </div>
                 </div>

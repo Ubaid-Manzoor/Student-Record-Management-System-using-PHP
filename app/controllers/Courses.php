@@ -19,10 +19,10 @@
 
 
                 // Validation 
-                if(empty($data['cshort'])){
+                if(empty($data['short_name'])){
                     $data['short_name'] == "Fill the Name";
                 }
-                if(empty($data['cfull'])){
+                if(empty($data['full_name'])){
                     $data['full_name'] == "Fill the Name";
                 }
 

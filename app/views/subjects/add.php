@@ -1,5 +1,3 @@
-<?php echo "Here" ?> 
-
 <?php require APPROOT . '/views/inc/header.php';?>
 
         <?php require_once APPROOT . '/views/inc/sidebar.php'; ?>
@@ -12,28 +10,37 @@
                         Add Subjects
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="#">
+                       
+                        <form method="POST" action="<?php echo URLROOT; ?>/Subjects/add">
                             <div class="form-group">
                                 <label for="">Course Short Name</label>
-                                <input type="text" class="form-control">
+                                <select name="short_name" class="custom-select">
+                                    <?php foreach($data as $course): ?>
+                                        <option value="<?php echo $course->short_name; ?>"><?php echo $course->short_name; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="">Course Full Name</label>
-                                <input type="text" class="form-control">
+                                <select name="full_name" class="custom-select">
+                                    <?php foreach($data as $course): ?>
+                                        <option value="<?php echo $course->full_name; ?>"><?php echo $course->full_name; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="">Subject 1</label>
-                                <input type="text" class="form-control">
+                                <input name="sub1" type="text" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="">Subject 2</label>
-                                <input type="text" class="form-control">
+                                <input name="sub2" type="text" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Subject</label>
-                                <input type="text" class="form-control">
+                                <label for="">Subject 3</label>
+                                <input name="sub3" type="text" class="form-control">
                             </div>
-                            <input type="submit" value="Add Course" class="btn btn-primary">
+                            <input name="submit" type="submit"  value="Add Course" class="btn btn-primary">
                         </form>
                     </div>
                 </div>
