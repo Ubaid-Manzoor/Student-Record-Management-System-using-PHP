@@ -30,7 +30,7 @@
                                 <input type="text" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Subject 3</label>
+                                <label for="">Subject</label>
                                 <input type="text" class="form-control">
                             </div>
                             <input type="submit" value="Add Course" class="btn btn-primary">
