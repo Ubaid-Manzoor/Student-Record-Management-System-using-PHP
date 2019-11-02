@@ -29,8 +29,12 @@
                                         <td><?php echo $course->sub2; ?></td>
                                         <td><?php echo $course->sub3; ?></td>
                                         <td class="action-icon">
-                                            <i class="fas fa-pen-square"></i>    
-                                            <i class="fas fa-backspace ml-auto"></i>
+                                            <a href="<?php echo URLROOT; ?>/Subjects/edit/<?php echo $course->id ?>">
+                                                <i class="fas fa-pen-square"></i>   
+                                            </a> 
+                                            <a href="<?php echo URLROOT; ?>/Subjects/delete/<?php echo $course->id ?>">
+                                                <i class="fas fa-backspace ml-auto"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

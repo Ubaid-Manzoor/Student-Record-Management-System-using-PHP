@@ -1,3 +1,6 @@
+<?php 
+?>
+
 <?php require APPROOT . '/views/inc/header.php';?>
 
         <?php require_once APPROOT . '/views/inc/sidebar.php'; ?>
@@ -7,23 +10,19 @@
             <div class="container">
                 <div class="card">
                     <div class="card-header">
-                        Add Subjects
+                        Edit Course
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="#">
+                        <form method="POST" action="<?php echo URLROOT; ?>/Courses/edit/<?php echo $data->id; ?>">
                             <div class="form-group">
                                 <label for="">Course Short Name</label>
-                                <input type="text" class="form-control">
+                                <input name="cshort" type="text" class="form-control" value="<?php echo $data->short_name; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="">Course Full Name</label>
-                                <input type="text" class="form-control">
+                                <input name="cfull" type="text" class="form-control" value="<?php echo $data->full_name; ?>">
                             </div>
-                            <div class="form-group">
-                                <label for="">Subject</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <input type="submit" value="Add Course" class="btn btn-primary">
+                            <input type="submit" name="submit" value="Update" class="btn btn-primary">
                         </form>
                     </div>
                 </div>

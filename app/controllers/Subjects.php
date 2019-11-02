@@ -66,4 +66,55 @@
             
             $this->view('subjects/show',$subjects);
         }
+
+        public function edit($id){
+            if(!empty($_POST['submit'])){
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+                $data = [
+                    'sub1' => trim($_POST['sub1']),
+                    'sub2' => trim($_POST['sub2']),
+                    'sub3' => trim($_POST['sub3']),
+                    'sub1_err' => '',
+                    'sub2_err' => '',
+                    'sub3_err' => '',
+                    'id' => $id,
+                ];
+
+                $isempty = false;
+                if(empty($data['sub1'])){
+                    $data['sub1_err'] = "Fill The Subject 1";
+                    $isempty = true;
+                }
+                if(empty($data['sub2'])){
+                    $data['sub2_err'] = "Fill The Subject 2";
+                    $isempty = true;
+                }
+                if(empty($data['sub3'])){
+                    $data['sub3_err'] = "Fill The Subject 3";
+                    $isempty = true;
+                }
+
+                if(!$isempty){
+                    if(!$this->subjectModel->update($data)){
+                        echo "Something Went Wrong";
+                    }
+                }else{
+                    echo "Fill The Form";
+                }
+                header("Location: " . URLROOT . "/courses/show");
+            }
+            else{
+                $data = $this->subjectModel->getSubject($id);
+                $this->view('subjects/edit',$data);
+            }
+            
+        }
+
+        public function delete($id){
+            $this->subjectModel->delete($id);
+
+            header('Location: '. URLROOT . '/subjects/show');
+        }
+
     }

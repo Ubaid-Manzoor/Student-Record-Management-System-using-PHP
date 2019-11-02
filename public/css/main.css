@@ -33,3 +33,5 @@ main .main-area .card {
   main .main-area .card .card-body .action-icon {
     display: flex;
     border: 0; }
+    main .main-area .card .card-body .action-icon a:first-child {
+      flex: 1; }

@@ -22,10 +22,10 @@
             </a>
             <ul class="flex-column collapse" id="subject-items">
                 <li class="nav-item py-2">
-                    <a href="<?php echo URLROOT; ?>/Subjects/show" class="nav-link">View Subjects</a>
+                    <a href="<?php echo URLROOT; ?>/Subjects/add" class="nav-link">Add Subject</a>
                 </li>
                 <li class="nav-item py-2">
-                    <a href="<?php echo URLROOT; ?>/Subjects/add" class="nav-link">Add Subject</a>
+                    <a href="<?php echo URLROOT; ?>/Subjects/show" class="nav-link">View Subjects</a>
                 </li>
             </ul>
         </li>

@@ -20,10 +20,10 @@
 
                 // Validation 
                 if(empty($data['short_name'])){
-                    $data['short_name'] == "Fill the Name";
+                    $data['short_name_err'] == "Fill the Name";
                 }
                 if(empty($data['full_name'])){
-                    $data['full_name'] == "Fill the Name";
+                    $data['full_name_err'] == "Fill the Name";
                 }
 
                 if(!empty($data['short_name']) && !empty($data['full_name'])){
@@ -50,4 +50,44 @@
 
         }
 
+        public function edit($id){
+            if(!empty($_POST['submit'])){
+                $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+                $data = [
+                    'short_name' => trim($_POST['cshort']),
+                    'full_name' => trim($_POST['cfull']),
+                    'id' => $id,
+                    'short_name_err' => '',
+                    'full_name_err' => ''
+                ];
+
+                $isempty = false;
+                if(empty($data['short_name'])){
+                    $data['short_name_err'] = "Fill The Short Name";
+                    $isempty = true;
+                }
+                if(empty($data['full_name'])){
+                    $data['full_name_err'] = "Fill the Full Name";
+                }
+
+                if(!$isempty){
+                    if(!$this->courseModel->update($data)){
+                        echo "Something Went Wrong";
+                    }
+                }else{
+                    echo "Fill The Form";
+                }
+                header("Location: " . URLROOT . "/courses/show");
+            }else{
+                $data = $this->courseModel->getCourse($id);
+                $this->view('courses/edit' , $data);
+            }
+        }
+
+        public function delete($id){
+            $this->courseModel->delete($id);
+
+            header('Location: '. URLROOT . '/courses/show');
+        }
     }
