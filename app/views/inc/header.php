@@ -10,10 +10,17 @@
 </head>
 <body>
     <header class="main-header">
-        <div class="header-container">
-
+        <nav class="header-container">
             <h1 class="brand h4">Student Management System</h1>
-        </div>
+            <div class="user-auth">
+                <?php if($_SESSION['user_id']): ?>
+                    <a href="<?php echo URLROOT; ?>/Users/logout">Logout</a>
+                <?php else: ?>
+                    <a href="<?php echo URLROOT; ?>/Users/login">Login</a>
+                    <a href="<?php echo URLROOT; ?>/Users/register">Sign in</a>
+                <?php endif; ?>
+            </div>
+        </nav>
     </header>
     <main class="main">
         <div class="row">

@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-6 mx-auto bg-light mt-5">
             <div class="text-center">
-                <h2>Register</h2>
+                <h2>Login</h2>
             </div>
-            <form method="post" action="<?php echo URLROOT; ?>/Users/register">
-
+            <form method="post" action="<?php echo URLROOT; ?>/Users/login">
+                <?php echo flash("register_success"); ?>
                 <div class="form-group">
                     <label for="">Email</label>
                     <input name="email" class="form-control <?php echo (!empty($data['email_err'])) ? "is-invalid" :

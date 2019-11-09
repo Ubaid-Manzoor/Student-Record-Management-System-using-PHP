@@ -6,7 +6,15 @@
 header {
   background: lavender; }
   header .header-container {
-    padding: 0.5rem 2rem; }
+    padding: 0.5rem 2rem;
+    display: flex; }
+    header .header-container .user-auth h1, header .header-container a {
+      vertical-align: sub;
+      padding: 1rem; }
+    header .header-container .user-auth a {
+      text-decoration: none; }
+    header .header-container h1 {
+      flex: 1; }
 
 main .col-2 {
   padding-left: 0;

@@ -10,25 +10,25 @@
                     <div class="form-group">
                         <label for="">UserName</label>
                         <input name="name" class="form-control <?php echo (!empty($data['name_err'])) ? "is-invalid" :
-                            '' ?>" type="text">
+                            '' ?>" type="text" value="<?php echo $data['name']; ?>">
                         <span class="invalid-feedback"><?php echo $data['name_err'] ?></span>
                     </div>
                     <div class="form-group">
                         <label for="">Email</label>
                         <input name="email" class="form-control <?php echo (!empty($data['email_err'])) ? "is-invalid" :
-                            '' ?>" type="text">
+                            '' ?>" type="text" value="<?php echo $data['email']; ?>">
                         <span class="invalid-feedback"><?php echo $data['email_err'] ?></span>
                     </div>
                     <div class="form-group">
                         <label for="">Password</label>
                         <input name="pwd" class="form-control <?php echo (!empty($data['pwd_err'])) ? "is-invalid" :
-                            '' ?>" type="password">
+                            '' ?>" type="password" value="<?php echo $data['pwd']; ?>">
                         <span class="invalid-feedback"><?php echo $data['pwd_err'] ?></span>
                     </div>
                     <div class="form-group">
                         <label for="">Confirm Password</label>
                         <input name="confirm_pwd" class="form-control <?php echo (!empty($data['confirm_pwd_err'])) ? "is-invalid" :
-                            '' ?>" type="password">
+                            '' ?>" type="password" value="<?php echo $data['confirm_pwd'] ?>">
                         <span class="invalid-feedback"><?php echo $data['confirm_pwd_err'] ?></span>
                     </div>
 

@@ -9,6 +9,17 @@
     background:lavender;
     .header-container{
         padding:0.5rem 2rem;
+        display: flex;
+        .user-auth h1,a{
+            vertical-align: sub;
+            padding: 1rem;
+        }
+        .user-auth a{
+            text-decoration: none;
+        }
+        h1{
+            flex:1;
+        }
     }
  }
 
