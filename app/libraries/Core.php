@@ -7,27 +7,21 @@
 
         public function __construct(){
             $url = $this->getUrl();
-//            die($url[1]);
             if($_SESSION['user_id']){
                 if(file_exists('../app/controllers/' . ucwords($url[0]) . '.php' )){
                     $this->currentController = ucwords($url[0]);
-//                    die($this->currentController);
                     unset($url[0]);
                 }
 
                 if(isset($url[1])){
-//                    die($this->currentController);
+                    require_once '../app/controllers/' . $this->currentController . '.php';
                     if(method_exists($this->currentController, $url[1])){
-//                        die($this->currentController);
-//                        die($url[1]);
                         $this->currentMethod = $url[1];
-//                        die($this->currentMethod);
                         unset($url[1]);
                     }else{
                         $this->currentController = 'Users';
                     }
                 }
-//                die($this->currentMethod);
             }else{
                 if(!(ucwords($url[0] == 'Users'))){
                     header("Location: " . URLROOT . "/Users/login");
@@ -35,7 +29,6 @@
                     $this->currentMethod = 'register';
                 }
             }
-
 
             require_once '../app/controllers/' . $this->currentController . '.php';
             $this->currentController = new $this->currentController;
