@@ -119,6 +119,7 @@
         }
 
         public function show(){
-            $this->view('students/show');
+            $data = $this->studentModel->getStudents();
+            $this->view('students/show', $data);
         }
     }

@@ -1,3 +1,7 @@
+<?php
+    if($_SESSION['user_id'])
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +17,14 @@
         <nav class="header-container">
             <h1 class="brand h4">Student Management System</h1>
             <div class="user-auth">
-                <?php if($_SESSION['user_id']): ?>
-                    <a href="<?php echo URLROOT; ?>/Users/logout">Logout</a>
-                <?php else: ?>
-                    <a href="<?php echo URLROOT; ?>/Users/login">Login</a>
+            <?php if(!$_SESSION['user_id']): ?>
+                <?php if($_GET['url'] !== 'Users/login'): ?>
+                   <a href="<?php echo URLROOT; ?>/Users/login">Login</a>
+                <?php endif; ?>
+                <?php if($_GET['url'] !== 'Users/register'): ?>
                     <a href="<?php echo URLROOT; ?>/Users/register">Sign in</a>
                 <?php endif; ?>
+            <?php endif; ?>
             </div>
         </nav>
     </header>

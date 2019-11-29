@@ -85,9 +85,9 @@
                             <div class="form-group">
                                 <label for="">Category</label>
                                 <select class="form-control" name="category">
-                                    <option>10k-20k</option>
-                                    <option>20k-30k</option>
-                                    <option>30k ...</option>
+                                    <option>General</option>
+                                    <option>Sports</option>
+                                    <option>Others</option>
                                 </select>
                             </div>
                             <div class="form-group">

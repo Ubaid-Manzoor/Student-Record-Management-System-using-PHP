@@ -39,7 +39,7 @@
             <a href="<?php echo URLROOT; ?>/pages/session"  class="nav-link">Session</a>
         </li>
         <li class="nav-item py-2">
-            <a href="#"  class="nav-link">Logout</a>
+            <a href="<?php echo URLROOT; ?>/Users/logout"  class="nav-link">Logout</a>
         </li>
     </ul>
 </nav>

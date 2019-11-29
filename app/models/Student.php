@@ -63,6 +63,14 @@
 
         }
 
+        public function getStudents(){
+           $query = "SELECT * FROM students";
+
+           $this->db->query($query);
+           $students = $this->db->resultSet();
+           return $students;
+        }
+
 
 
     }
